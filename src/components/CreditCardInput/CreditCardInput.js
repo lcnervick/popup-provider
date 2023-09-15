@@ -8,13 +8,13 @@ export default function CreditCardInput({ popup }) {
     const { showLightbox, showAlert } = useContext(PopupContext);
 
     const cardDef = {
-        type: 'visa',
-        number: '4444 4444 4444 4444',
-        name: 'Leif',
-        expMonth: '12',
-        expYear: '29',
-        ccv: '123',
-        zip: '80020'
+        type: '',
+        number: '',
+        name: '',
+        expMonth: '',
+        expYear: '',
+        ccv: '',
+        zip: ''
     };
 
     // Credit Card Info State
