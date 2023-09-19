@@ -15,10 +15,7 @@
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "dependencies": {
-    "axios": "^1.5.0",
     "clean-terminal-webpack-plugin": "^3.0.0",
-    "react-dnd": "^16.0.1",
-    "react-dnd-html5-backend": "^16.0.1",
     "react-draggable": "^4.4.5",
     "uuid": "^9.0.1"
   },
@@ -47,9 +44,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.5.2",
     "react-redux": "^8.1.1",
-    "react-router-dom": "^6.14.2",
     "react-scripts": "^5.0.1",
     "style-loader": "^3.3.3",
     "web-vitals": "^3.4.0",
