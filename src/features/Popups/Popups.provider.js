@@ -11,7 +11,6 @@ export default function PopupProvider({ children }) {
     const [confirms, setConfirms] = useState([]);
 	
 	const showLightbox = (title, Body) => {
-		console.log("Showing Lightbox", title, typeof Body);
 		setLightboxes(prevLightboxes => [
 			...prevLightboxes,
 			{

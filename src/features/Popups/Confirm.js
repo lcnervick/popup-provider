@@ -11,7 +11,6 @@ function ConfirmBody({ Message, actions }) {
 }
 
 export default function Confirm({ data }) {
-    console.log("Showing Confirm", data);
     const { closeConfirm } = useContext(PopupContext);
 	const close = (confirmed) => { 
         closeConfirm(data.id);

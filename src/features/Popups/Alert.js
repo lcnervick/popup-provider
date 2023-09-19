@@ -16,7 +16,6 @@ function AlertBody({ Message, actions }) {
 }
 
 export default function Alert({ data }) {
-    console.log("Showing Alert", data);
     const { closeAlert } = useContext(PopupContext);
 	const close = () => { 
         closeAlert(data.id);
