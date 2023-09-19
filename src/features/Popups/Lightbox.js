@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Draggable from 'react-draggable';
 import PopupContext from './Popups.context';
 import closeButton from '../../common/images/close.png';
 import './Lightbox.css';
@@ -25,21 +26,25 @@ export default function Lightbox({ data, children, icon = null }) {
 	return (
 		<div className='lightbox-wrapper' id={data.id}>
 			<div className="shadowbox"></div>
-			<div className="lightbox" onClick={(e) => e.stopPropagation()}>
-				<div className="lightbox-header">
-					<div className='lightbox-title'>
-						<h2>{data.title}</h2>
+			<Draggable handle=".lightbox-title" defaultPosition={{ x: '-50px', y: '-50px' }}>
+				<div 
+					className="lightbox" 
+					onClick={(e) => e.stopPropagation()}
+				>
+					<div className="lightbox-header">
+						<div className='lightbox-title'>
+							<h2>{data.title}</h2>
+						</div>
+						<button className='closeButton' onClick={icon.action}>
+							<img src={icon.image} alt="Close Popup" />
+						</button>
 					</div>
-					<button className='closeButton' onClick={icon.action}>
-						<img src={icon.image} alt="Close Popup" />
-					</button>
+				
+					<div className='lightbox-content'>
+						<LightboxBody Body={data.Body || children} actions={{ close }} />
+					</div>
 				</div>
-			
-				<div className='lightbox-content'>
-					<LightboxBody Body={data.Body || children} actions={{ close }} />
-				</div>
-			</div>
-			
+			</Draggable>
 		</div>
 	);
 }
