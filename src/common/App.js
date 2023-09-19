@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PopupContext from "../features/Popups/Popups.context";
-import CreditCardInput from '../components/CreditCardInput/CreditCardInput'
+import CreditCardInput from '../components/CreditCardInput/CreditCardInput';
 
 import './styles/styles.css';
 import './styles/animations.css';
@@ -9,7 +9,7 @@ import './styles/custom-elements.css';
 function Test() {
 	return (
 		<h3>Testing Alerts</h3>
-	)
+	);
 }
 
 export default function App() {
